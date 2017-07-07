@@ -1,0 +1,38 @@
+td {
+    width:50px;
+    height:50px;
+    border: 1px solid white;
+    background-color: dodgerblue;
+    text-align: center;
+    font-size:20px;
+    font-family: "DejaVu Sans";
+    color:white;
+    cursor: pointer;
+}
+table {
+    margin:auto auto;
+}
+#container {
+    width:550px;
+    height:560px;
+    margin:auto auto;
+    margin-top:20px;
+    padding:20px;
+    border:2px solid lightgray;
+}
+h1 {
+    font-family: "DejaVu Sans";
+    color:dodgerblue;
+}
+button {
+    width: 300px;
+    height:80px;
+    font-size:50px;
+    padding:5px;
+    background-color: limegreen;
+    border:0px;
+    border-radius:10px;
+    color:white;
+    margin-left:80px;
+    margin-top:50px;
+}
