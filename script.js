@@ -64,14 +64,15 @@ function check() {
     else {
         elem1.style.backgroundColor = "dodgerblue";
         elem2.style.backgroundColor = "dodgerblue";
-
-        elem1.textContent = "";
-        elem2.textContent = "";
+        elem1.removeChild(elem1.lastChild);
+        elem2.removeChild(elem2.lastChild);
+       // elem1.textContent = "";
+        //elem2.textContent = "";
         elem1 = null;
         elem2 = null;
 
     }
-    if(deleted === 2){
+    if(deleted === 100){
         endGame();
     }
 }
@@ -79,12 +80,18 @@ function check() {
 function click(element) {
     if(elem1===null){
         elem1=element.target;
-        elem1.style.backgroundColor = "orange";
-        elem1.textContent = parseInt(elem1.getAttribute('id'))+1;
+        elem1.style.backgroundColor = "white";
+        //elem1.textContent = parseInt(elem1.getAttribute('id'))+1;
+        var img = document.createElement('img');
+        img.setAttribute('src','png/'+(parseInt(elem1.getAttribute('id'))+1) +'.png');
+        elem1.appendChild(img);
     }else if(elem1!=element.target){
         elem2=element.target;
-        elem2.style.backgroundColor = "orange";
-        elem2.textContent = parseInt(elem2.getAttribute('id'))+1;
+        elem2.style.backgroundColor = "white";
+       // elem2.textContent = parseInt(elem2.getAttribute('id'))+1;
+        var img = document.createElement('img');
+        img.setAttribute('src','png/'+(parseInt(elem2.getAttribute('id'))+1) +'.png');
+        elem2.appendChild(img);
         setTimeout(check,1000);
     }
 }
