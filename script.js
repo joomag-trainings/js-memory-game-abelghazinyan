@@ -78,21 +78,23 @@ function check() {
 }
 
 function click(element) {
-    if(elem1===null){
-        elem1=element.target;
-        elem1.style.backgroundColor = "white";
-        //elem1.textContent = parseInt(elem1.getAttribute('id'))+1;
-        var img = document.createElement('img');
-        img.setAttribute('src','png/'+(parseInt(elem1.getAttribute('id'))+1) +'.png');
-        elem1.appendChild(img);
-    }else if(elem1!=element.target){
-        elem2=element.target;
-        elem2.style.backgroundColor = "white";
-       // elem2.textContent = parseInt(elem2.getAttribute('id'))+1;
-        var img = document.createElement('img');
-        img.setAttribute('src','png/'+(parseInt(elem2.getAttribute('id'))+1) +'.png');
-        elem2.appendChild(img);
-        setTimeout(check,1000);
+    if(elem2==null) {
+        if (elem1 === null) {
+            elem1 = element.target;
+            elem1.style.backgroundColor = "white";
+            //elem1.textContent = parseInt(elem1.getAttribute('id'))+1;
+            var img = document.createElement('img');
+            img.setAttribute('src', 'png/' + (parseInt(elem1.getAttribute('id')) + 1) + '.png');
+            elem1.appendChild(img);
+        } else if (elem1 != element.target) {
+            elem2 = element.target;
+            elem2.style.backgroundColor = "white";
+            // elem2.textContent = parseInt(elem2.getAttribute('id'))+1;
+            var img = document.createElement('img');
+            img.setAttribute('src', 'png/' + (parseInt(elem2.getAttribute('id')) + 1) + '.png');
+            elem2.appendChild(img);
+            setTimeout(check, 1000);
+        }
     }
 }
 
